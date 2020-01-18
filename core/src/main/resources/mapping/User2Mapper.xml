@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="boot.dao.User2Mapper">
+    <resultMap type="boot.model.User2" id="baseMap">
+        <id property="id" column="id" />
+        <result property="name" column="name" />
+    </resultMap>
+    <insert id="insert" parameterType="boot.model.User2" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO user2 (id, name) VALUES (#{id}, #{name})
+    </insert>
+    <select id="selectByPrimaryKey" parameterType="boot.model.User2" resultMap="baseMap">
+        SELECT * FROM user2 WHERE id=#{id}
+    </select>
+</mapper>
+

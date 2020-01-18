@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+   username: root
+   password: 80909891aB=
+   url: jdbc:mysql://192.168.0.123:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+   driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+ mapper-locations: classpath:mapping/*Mapper.xml
+ type-aliases-package: boot.model
+
+#showSql
+logging:
+ level:
+  boot:
+   dao: debug
